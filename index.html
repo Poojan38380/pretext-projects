@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pretext Projects — by Poojan Goyani</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0a;
+      --surface: #141414;
+      --border: #222;
+      --text: #e0e0e0;
+      --text-dim: #888;
+      --accent: #c4a35a;
+      --accent-dim: #8b6914;
+      --radius: 8px;
+      --max-w: 1200px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; transition: color 0.15s; }
+    a:hover { color: #e0c06a; }
+
+    /* ── Header ── */
+    .header {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 4rem 1.5rem 3rem;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+
+    .header h1 span { color: var(--accent); }
+
+    .header .tagline {
+      font-size: 1.1rem;
+      color: var(--text-dim);
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .header .tagline strong { color: var(--text); }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+
+    .stats span { white-space: nowrap; }
+    .stats strong { color: var(--text); }
+
+    /* ── Pretext blurb ── */
+    .blurb {
+      max-width: var(--max-w);
+      margin: 0 auto 3rem;
+      padding: 0 1.5rem;
+      text-align: center;
+    }
+
+    .blurb p {
+      max-width: 650px;
+      margin: 0 auto;
+      color: var(--text-dim);
+      font-size: 0.95rem;
+    }
+
+    .blurb code {
+      background: var(--surface);
+      padding: 0.15em 0.4em;
+      border-radius: 4px;
+      font-size: 0.9em;
+      color: var(--accent);
+    }
+
+    /* ── Project grid ── */
+    .grid {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: border-color 0.2s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      border-color: var(--accent-dim);
+      transform: translateY(-2px);
+    }
+
+    .card img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .card-body {
+      padding: 1.25rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-body .order {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-dim);
+      margin-bottom: 0.3rem;
+    }
+
+    .card-body h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.01em;
+    }
+
+    .card-body .project-tagline {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      font-style: italic;
+      margin-bottom: 0.75rem;
+    }
+
+    .card-body .project-desc {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      margin-bottom: 1rem;
+      flex: 1;
+    }
+
+    .card-links {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .card-links a {
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.35rem 0.75rem;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      transition: all 0.15s;
+    }
+
+    .card-links a:first-child {
+      background: var(--accent);
+      color: #000;
+      border-color: var(--accent);
+    }
+
+    .card-links a:first-child:hover {
+      background: #e0c06a;
+      border-color: #e0c06a;
+    }
+
+    .card-links a:last-child:hover {
+      border-color: var(--accent);
+    }
+
+    /* ── Footer ── */
+    .footer {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+
+    .footer a { font-weight: 500; }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .header h1 { font-size: 1.8rem; }
+      .grid { grid-template-columns: 1fr; }
+      .stats { gap: 1rem; }
+      .footer { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 420px) {
+      .grid { grid-template-columns: 1fr; gap: 1rem; }
+      .header { padding: 2.5rem 1rem 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>Pretext <span>Projects</span></h1>
+    <p class="tagline"><strong>8 text-driven Canvas experiments.</strong> Built in 3 days. Zero DOM reads. All MIT.</p>
+    <div class="stats">
+      <span><strong>8</strong> projects</span>
+      <span><strong>3</strong> days</span>
+      <span><strong>~142</strong> commits</span>
+      <span><strong>~10K+</strong> lines</span>
+      <span><strong>0</strong> DOM reads/frame</span>
+    </div>
+  </header>
+
+  <!-- Pretext blurb -->
+  <div class="blurb">
+    <p>Built with <a href="https://github.com/chenglou/pretext" target="_blank" rel="noopener noreferrer"><code>@chenglou/pretext</code></a> — a text layout library that bypasses the DOM entirely. One-time canvas measurement, then pure arithmetic at ~0.0002ms per call.</p>
+  </div>
+
+  <!-- Projects -->
+  <main class="grid">
+
+    <!-- 1. Playground Upgrade -->
+    <article class="card">
+      <img src="images/ice-dragon-main.png" alt="Pretext Playground Upgrade" loading="lazy">
+      <div class="card-body">
+        <span class="order">Project 1</span>
+        <h2>🐉 Pretext Playground Upgrade</h2>
+        <p class="project-tagline">Every character on screen is a physics body.</p>
+        <p class="project-desc">Three interactive demos: an ASCII dragon with fire/ice breath, a bioluminescent jellyfish abyss, and five animated ASCII art scenes. Structure-of-Arrays, zero GC in the game loop.</p>
+        <div class="card-links">
+          <a href="https://pretext-playground-upg.vercel.app" target="_blank" rel="noopener noreferrer">▶ Live Demo</a>
+          <a href="https://github.com/Poojan38380/pretext-playground-upgrade" target="_blank" rel="noopener noreferrer">Source</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 2. Ink & Vapor -->
+    <article class="card">
+      <img src="images/ink-vapor-home-page.png" alt="Ink & Vapor" loading="lazy">
+      <div class="card-body">
+        <span class="order">Project 2</span>
+        <h2>🖋️ Ink &amp; Vapor</h2>
+        <p class="project-tagline">The boundary between permanence and impermanence is a line you draw.</p>
+        <p class="project-desc">A draggable wavy boundary splits the screen. Below: solid serif ink. Above: particles drifting on noise fields. 3 themes, vortex mode, and control panel sliders.</p>
+        <div class="card-links">
+          <a href="https://ink-and-vapor.vercel.app" target="_blank" rel="noopener noreferrer">▶ Live Demo</a>
+          <a href="https://github.com/Poojan38380/Ink-and-Vapor" target="_blank" rel="noopener noreferrer">Source</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 3. Exoskeleton -->
+    <article class="card">
+      <img src="images/exoskeleton-home.png" alt="Exoskeleton" loading="lazy">
+      <div class="card-body">
+        <span class="order">Project 3</span>
+        <h2>🪲 Exoskeleton</h2>
+        <p class="project-tagline">A Digital Monograph on Insect Morphology.</p>
+        <p class="project-desc">An interactive digital book about entomology. Custom text layout engine (~3,000 lines), compound eye cursor, pheromone simulation, 75+ Vitest tests, and GitHub Actions CI.</p>
+        <div class="card-links">
+          <a href="https://exoskeleton-tau.vercel.app" target="_blank" rel="noopener noreferrer">▶ Live Demo</a>
+          <a href="https://github.com/Poojan38380/EXOSKELETON-A-Digital-Monograph" target="_blank" rel="noopener noreferrer">Source</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 4. Aether -->
+    <article class="card">
+      <img src="images/aether-home-page-normal-state.png" alt="Aether" loading="lazy">
+      <div class="card-body">
+        <span class="order">Project 4</span>
+        <h2>🌫️ Aether</h2>
+        <p class="project-tagline">Smoke-like fluid dynamics drive real text layout on Canvas 2D.</p>
+        <p class="project-desc">Move your mouse to inject ASCII smoke. Body text flows around high-density regions in real time. Multi-frequency velocity field with shockwave interaction.</p>
+        <div class="card-links">
+          <a href="https://aether-sage-beta.vercel.app" target="_blank" rel="noopener noreferrer">▶ Live Demo</a>
+          <a href="https://github.com/Poojan38380/aether" target="_blank" rel="noopener noreferrer">Source</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 5. TextVerse -->
+    <article class="card">
+      <img src="images/text-verse-2nd-section-in-action.png" alt="TextVerse" loading="lazy">
+      <div class="card-body">
+        <span class="order">Project 5</span>
+        <h2>📖 TextVerse</h2>
+        <p class="project-tagline">Text that lives, not just sits.</p>
+        <p class="project-desc">Scroll-driven narrative where text is the protagonist. Particles assemble into words. Words become physics bodies you can launch projectiles at. Custom spring engine, 2000 bodies at 60fps.</p>
+        <div class="card-links">
+          <a href="https://text-verse.vercel.app" target="_blank" rel="noopener noreferrer">▶ Live Demo</a>
+          <a href="https://github.com/Poojan38380/TextVerse" target="_blank" rel="noopener noreferrer">Source</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 6. Creature Lab -->
+    <article class="card">
+      <img src="images/creature-lab-home-screen.png" alt="Creature Lab" loading="lazy">
+      <div class="card-body">
+        <span class="order">Project 6</span>
+        <h2>🦠 Creature Lab</h2>
+        <p class="project-tagline">Every keystroke spawns a life form.</p>
+        <p class="project-desc">Type any character and watch organisms emerge. Five families — Herd Animals, Apex Predators, Wanderers, Scavengers, Titans. Punctuation triggers earthquakes, rain, and gravity wells.</p>
+        <div class="card-links">
+          <a href="https://creature-lab.vercel.app" target="_blank" rel="noopener noreferrer">▶ Live Demo</a>
+          <a href="https://github.com/Poojan38380/creature-lab" target="_blank" rel="noopener noreferrer">Source</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 7. GlyphStream -->
+    <article class="card">
+      <img src="images/glyphstream-home-page.png" alt="GlyphStream" loading="lazy">
+      <div class="card-body">
+        <span class="order">Project 7</span>
+        <h2>✨ GlyphStream</h2>
+        <p class="project-tagline">Five generative algorithms — each a living system, every render unique.</p>
+        <p class="project-desc">A reusable ASCII art library: Flow Field, Typography, Reactive, Ambient, and Face Generator. Common component API, one dependency (pretext), import any component.</p>
+        <div class="card-links">
+          <a href="https://glyphstream.vercel.app" target="_blank" rel="noopener noreferrer">▶ Live Demo</a>
+          <a href="https://github.com/Poojan38380/glyphstream" target="_blank" rel="noopener noreferrer">Source</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 8. Typogenesis -->
+    <article class="card">
+      <img src="images/editorial-engine-upgrade.png" alt="Typogenesis" loading="lazy">
+      <div class="card-body">
+        <span class="order">Project 8</span>
+        <h2>📰 Typogenesis</h2>
+        <p class="project-tagline">Where text breathes, flows, and becomes.</p>
+        <p class="project-desc">Multi-column editorial layout with text flowing around animated orb obstacles. Layout computation under 0.5ms. Dual themes, 1,200-particle flow field, GPU-composited transforms.</p>
+        <div class="card-links">
+          <a href="https://typogenesis.vercel.app" target="_blank" rel="noopener noreferrer">▶ Live Demo</a>
+          <a href="https://github.com/Poojan38380/Editorial-Engine-Upg" target="_blank" rel="noopener noreferrer">Source</a>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <span>Built by <a href="https://github.com/Poojan38380" target="_blank" rel="noopener noreferrer">Poojan Goyani</a> · <a href="https://www.linkedin.com/in/poojan-goyani-404224253/" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+    <span>Text engine by <a href="https://github.com/chenglou/pretext" target="_blank" rel="noopener noreferrer">Cheng Lou</a> · <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer">MIT License</a></span>
+  </footer>
+
+</body>
+</html>
