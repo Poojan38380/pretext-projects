@@ -4,10 +4,10 @@
 
 | | |
 |---|---|
-| **Author** | <a href="https://github.com/Poojan38380" target="_blank" rel="noopener noreferrer">Poojan Goyani</a> |
-| **Text Engine** | <a href="https://github.com/chenglou/pretext" target="_blank" rel="noopener noreferrer">@chenglou/pretext</a> |
+| **Author** | [Poojan Goyani](https://github.com/Poojan38380) |
+| **Text Engine** | [@chenglou/pretext](https://github.com/chenglou/pretext) |
 | **Stack** | TypeScript · Vite · Canvas 2D |
-| **License** | <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer">MIT</a> |
+| **License** | MIT |
 
 ---
 
@@ -33,7 +33,7 @@ Every project below uses pretext as its core text engine.
 
 > *Every character on screen is a physics body.*
 
-<a href="https://pretext-playground-upg.vercel.app" target="_blank" rel="noopener noreferrer">**▶ Live Demo**</a> · <a href="https://github.com/Poojan38380/pretext-playground-upgrade" target="_blank" rel="noopener noreferrer">**Source**</a>
+[**▶ Live Demo**](https://pretext-playground-upg.vercel.app) · [**Source**](https://github.com/Poojan38380/pretext-playground-upgrade)
 
 Three interactive Canvas 2D demos — each showcasing a fundamentally different application of pretext.
 
@@ -55,7 +55,7 @@ Performance: Structure-of-Arrays (`Float32Array`), pre-allocated pools, zero GC 
 
 > *The boundary between permanence and impermanence is a line you draw.*
 
-<a href="https://ink-and-vapor.vercel.app" target="_blank" rel="noopener noreferrer">**▶ Live Demo**</a> · <a href="https://github.com/Poojan38380/Ink-and-Vapor" target="_blank" rel="noopener noreferrer">**Source**</a>
+[**▶ Live Demo**](https://ink-and-vapor.vercel.app) · [**Source**](https://github.com/Poojan38380/Ink-and-Vapor)
 
 A draggable wavy boundary splits the screen. Below: solid ink typeset in heavy serif. Above: the same text dissolved into a generative particle cloud drifting on noise fields.
 
@@ -74,7 +74,7 @@ A draggable wavy boundary splits the screen. Below: solid ink typeset in heavy s
 
 > *A Digital Monograph on Insect Morphology.*
 
-<a href="https://exoskeleton-tau.vercel.app" target="_blank" rel="noopener noreferrer">**▶ Live Demo**</a> · <a href="https://github.com/Poojan38380/EXOSKELETON-A-Digital-Monograph" target="_blank" rel="noopener noreferrer">**Source**</a>
+[**▶ Live Demo**](https://exoskeleton-tau.vercel.app) · [**Source**](https://github.com/Poojan38380/EXOSKELETON-A-Digital-Monograph)
 
 An interactive, beautifully typeset digital book about entomology. Custom text layout engine (~3,000+ lines) that wraps text around images with bidirectional text support. 75+ tests, CI/CD pipeline.
 
@@ -93,7 +93,7 @@ An interactive, beautifully typeset digital book about entomology. Custom text l
 
 > *Smoke-like fluid dynamics drive real text layout on Canvas 2D.*
 
-<a href="https://aether-sage-beta.vercel.app" target="_blank" rel="noopener noreferrer">**▶ Live Demo**</a> · <a href="https://github.com/Poojan38380/aether" target="_blank" rel="noopener noreferrer">**Source**</a>
+[**▶ Live Demo**](https://aether-sage-beta.vercel.app) · [**Source**](https://github.com/Poojan38380/aether)
 
 Move your mouse to inject ASCII smoke. Body text dynamically flows around high-density regions in real time. Click to send shockwaves.
 
@@ -112,7 +112,7 @@ Move your mouse to inject ASCII smoke. Body text dynamically flows around high-d
 
 > *Text that lives, not just sits.*
 
-<a href="https://text-verse.vercel.app" target="_blank" rel="noopener noreferrer">**▶ Live Demo**</a> · <a href="https://github.com/Poojan38380/TextVerse" target="_blank" rel="noopener noreferrer">**Source**</a>
+[**▶ Live Demo**](https://text-verse.vercel.app) · [**Source**](https://github.com/Poojan38380/TextVerse)
 
 An immersive, scroll-driven Canvas experience where text is the protagonist. Particles assemble into words. Words become physics bodies you can launch projectiles at.
 
@@ -131,7 +131,7 @@ An immersive, scroll-driven Canvas experience where text is the protagonist. Par
 
 > *Every keystroke spawns a life form.*
 
-<a href="https://creature-lab.vercel.app" target="_blank" rel="noopener noreferrer">**▶ Live Demo**</a> · <a href="https://github.com/Poojan38380/creature-lab" target="_blank" rel="noopener noreferrer">**Source**</a>
+[**▶ Live Demo**](https://creature-lab.vercel.app) · [**Source**](https://github.com/Poojan38380/creature-lab)
 
 Type any character and watch procedurally generated organisms emerge. Predators hunt prey. Punctuation triggers earthquakes, rain, slow-motion, and gravity wells.
 
@@ -153,7 +153,7 @@ Type any character and watch procedurally generated organisms emerge. Predators 
 
 > *Five generative algorithms — each a living system, every render unique.*
 
-<a href="https://glyphstream.vercel.app" target="_blank" rel="noopener noreferrer">**▶ Live Demo**</a> · <a href="https://github.com/Poojan38380/glyphstream" target="_blank" rel="noopener noreferrer">**Source**</a>
+[**▶ Live Demo**](https://glyphstream.vercel.app) · [**Source**](https://github.com/Poojan38380/glyphstream)
 
 A reusable ASCII art library with five distinct components. Import one, pass config, get living art.
 
@@ -173,7 +173,7 @@ A reusable ASCII art library with five distinct components. Import one, pass con
 
 > *Where text breathes, flows, and becomes.*
 
-<a href="https://typogenesis.vercel.app" target="_blank" rel="noopener noreferrer">**▶ Live Demo**</a> · <a href="https://github.com/Poojan38380/Editorial-Engine-Upg" target="_blank" rel="noopener noreferrer">**Source**</a>
+[**▶ Live Demo**](https://typogenesis.vercel.app) · [**Source**](https://github.com/Poojan38380/Editorial-Engine-Upg)
 
 Multi-column editorial layout where text flows around animated orb obstacles in real time. Layout computation runs in **under 0.5ms** regardless of complexity.
 
@@ -232,9 +232,9 @@ All projects use **Vite** + **TypeScript** and start a dev server instantly.
 
 ## Credits
 
-- **Built by** — <a href="https://github.com/Poojan38380" target="_blank" rel="noopener noreferrer">Poojan Goyani</a> · <a href="https://www.linkedin.com/in/poojan-goyani-404224253/" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="https://twitter.com/Poojan38380" target="_blank" rel="noopener noreferrer">@Poojan38380</a>
-- **Text engine** — <a href="https://github.com/chenglou/pretext" target="_blank" rel="noopener noreferrer">@chenglou/pretext</a> by <a href="https://github.com/chenglou" target="_blank" rel="noopener noreferrer">Cheng Lou</a>
-- **All projects** — Open source under <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer">MIT License</a>
+- **Built by** — [Poojan Goyani](https://github.com/Poojan38380) · [LinkedIn](https://www.linkedin.com/in/poojan-goyani-404224253/) · [@Poojan38380](https://twitter.com/Poojan38380)
+- **Text engine** — [@chenglou/pretext](https://github.com/chenglou/pretext) by [Cheng Lou](https://github.com/chenglou)
+- **All projects** — Open source under [MIT License](https://opensource.org/licenses/MIT)
 
 ---
 
